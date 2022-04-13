@@ -1,6 +1,4 @@
 package com.example.mylibrary;
-
-import android.content.Context;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.TimeZone;
 import java.util.Date;
@@ -18,10 +16,10 @@ public class DateTimeFunctions {
 
     public static String secondsToDateTime(long Seconds)
     {
-        long lastupdatedTime = Seconds * 1000;
-        Date date = new Date(lastupdatedTime);
+       // long lastupdatedTime = Seconds;
+        Date date = new Date(Seconds);
         SimpleDateFormat formatter_time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
-        formatter_time.setTimeZone(TimeZone.getTimeZone("UTC"));
+        formatter_time.setTimeZone(TimeZone.getTimeZone("IST"));
         return formatter_time.format(date);
     }
 
