@@ -16,7 +16,6 @@ public class DateTimeFunctions {
 
     public static String secondsToDateTime(long Seconds)
     {
-       // long lastupdatedTime = Seconds;
         Date date = new Date(Seconds);
         SimpleDateFormat formatter_time = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss aa");
         formatter_time.setTimeZone(TimeZone.getTimeZone("IST"));
